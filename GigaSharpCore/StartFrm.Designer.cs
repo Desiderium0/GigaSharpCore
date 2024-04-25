@@ -96,13 +96,8 @@ namespace GigaSharpForms
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-<<<<<<< HEAD
             this.guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(888, 26);
-=======
-            this.guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1015, 34);
->>>>>>> parent of e6db73b (Update UI)
             this.guna2GradientPanel1.TabIndex = 0;
             this.guna2GradientPanel1.DoubleClick += new System.EventHandler(this.guna2GradientPanel1_DoubleClick);
             this.guna2GradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2GradientPanel1_MouseDown);
@@ -404,13 +399,8 @@ namespace GigaSharpForms
             this.guna2TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.ShadowDecoration.BorderRadius = 0;
-<<<<<<< HEAD
             this.guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             this.guna2TextBox2.Size = new System.Drawing.Size(682, 311);
-=======
-            this.guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(780, 415);
->>>>>>> parent of e6db73b (Update UI)
             this.guna2TextBox2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2TextBox2.TabIndex = 0;
             // 
@@ -429,17 +419,11 @@ namespace GigaSharpForms
             // 
             // iconButton5
             // 
-<<<<<<< HEAD
             this.iconButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton5.BackColor = System.Drawing.Color.Transparent;
             this.iconButton5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.iconButton5.FlatAppearance.BorderSize = 0;
             this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-=======
-            this.iconButton5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.iconButton5.FlatAppearance.BorderSize = 0;
->>>>>>> parent of e6db73b (Update UI)
             this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton5.Font = new System.Drawing.Font("Segoe UI", 9.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.MailReply;
@@ -482,13 +466,8 @@ namespace GigaSharpForms
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-<<<<<<< HEAD
             this.guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.guna2TextBox1.Size = new System.Drawing.Size(514, 44);
-=======
-            this.guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            this.guna2TextBox1.Size = new System.Drawing.Size(588, 58);
->>>>>>> parent of e6db73b (Update UI)
             this.guna2TextBox1.TabIndex = 7;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(0, 4);
             this.guna2TextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBox1_KeyDown);

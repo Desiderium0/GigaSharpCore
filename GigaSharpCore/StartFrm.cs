@@ -118,18 +118,14 @@ namespace GigaSharpForms
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             ActiveChat();
-=======
             this.panelColor1.BackColor = ActivateColor;
             this.panelColor2.BackColor = DisableColor;
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             ActiveSettings();
-=======
             this.panelColor2.BackColor = ActivateColor;
             this.panelColor1.BackColor = DisableColor;
         }
