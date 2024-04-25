@@ -118,42 +118,40 @@ namespace GigaSharpForms
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             ActiveChat();
+=======
+            this.panelColor1.BackColor = ActivateColor;
+            this.panelColor2.BackColor = DisableColor;
+>>>>>>> parent of e6db73b (Update UI)
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             ActiveSettings();
+=======
+            this.panelColor2.BackColor = ActivateColor;
+            this.panelColor1.BackColor = DisableColor;
+>>>>>>> parent of e6db73b (Update UI)
         }
 
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            SendMessage();
-        }
-
-        async Task CreateContent(string content)
-        {
-            guna2TextBox1.Text = string.Empty;
-            await Chat.CreateTokenAsync();
-            Response response = await Chat.CompletionsAsync(content);
-            guna2TextBox2.Text += "Чат-бот: " + response.choices.LastOrDefault().message.content + Environment.NewLine;
-        }
-
-        private void guna2TextBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendMessage();
-            }
-        }
-
-        private async void SendMessage()
+        private async void iconButton5_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(guna2TextBox1.Text))
             {
-                guna2TextBox2.Text += "Ваше сообщение: " + guna2TextBox1.Text + Environment.NewLine;
+                guna2TextBox2.Text += guna2TextBox1.Text;
+                guna2TextBox1.Text = string.Empty;
                 await CreateContent(guna2TextBox1.Text);
             }
+        }
+
+
+        async Task CreateContent(string content)
+        {
+            await Chat.CreateTokenAsync();
+            Response response = await Chat.CompletionsAsync(content);
+            guna2TextBox2.Text += "\n" + response.choices.LastOrDefault().message.content + "\n";
         }
 
         private void ActiveChat()
