@@ -7,16 +7,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LikhodedDynamics.Sber.GigaChatSDK;
 using LikhodedDynamics.Sber.GigaChatSDK.Models;
+using System.Text;
 
 namespace GigaSharpForms
 {
     public partial class StartFrm : Form
     {
         #region Params
-
-        private static string AuthorizationData = "ZWM3MzY4OGItMmQxYy00Nzg5LWE5OGUtOGU0NjE1OGQ2ODE4OmVjNjM1ZjI0LTJiY2ItNDk3YS04M2ZmLTQ5NmE1M2ViNWFlMg==";
-        private static GigaChat Chat = new(AuthorizationData, false, true, false);
+        //"ZWM3MzY4OGItMmQxYy00Nzg5LWE5OGUtOGU0NjE1OGQ2ODE4OmVjNjM1ZjI0LTJiY2ItNDk3YS04M2ZmLTQ5NmE1M2ViNWFlMg=="
+        private static string AuthorizationData;
+        private static GigaChat Chat;
         private bool IsDragging = false;
+        private string KeyRegister = "ApiKeyRegister";
         private Point dragCursorPoint;
         private Point dragFormPoint;
         private Color DisableColor = Color.FromArgb(94, 148, 255);
@@ -26,8 +28,15 @@ namespace GigaSharpForms
 
         public StartFrm()
         {
+              
             InitializeComponent();
             ActiveChat();
+            if (StorageRegistry.GetFromRegistry(KeyRegister) != null)
+            {
+                apiKeySber.Text = Encoding.UTF8.GetString(StorageRegistry.GetFromRegistry(KeyRegister));
+            }
+            AuthorizationData = apiKeySber.Text;
+            Chat = new(AuthorizationData, false, true, false);
         }
 
         #region Methods
@@ -134,10 +143,25 @@ namespace GigaSharpForms
 
         async Task CreateContent(string content)
         {
-            guna2TextBox1.Text = string.Empty;
-            await Chat.CreateTokenAsync();
-            Response response = await Chat.CompletionsAsync(content);
-            guna2TextBox2.Text += "Чат-бот: " + response.choices.LastOrDefault().message.content + Environment.NewLine;
+            try
+            {
+                guna2TextBox1.Text = string.Empty;
+                await Chat.CreateTokenAsync();
+                Response response = await Chat.CompletionsAsync(content);
+                if (response != null)
+                {
+                    guna2TextBox2.Text += "Чат-бот: " + response.choices.LastOrDefault().message.content + Environment.NewLine;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Проверьте верно ли указан API-KEY");
+            }
         }
 
         private void guna2TextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -179,6 +203,14 @@ namespace GigaSharpForms
             panelSetting2.Show();
             panelSetting2.Enabled = true;
             panelSetting2.Visible = true;
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            byte[] byteData = Encoding.UTF8.GetBytes(apiKeySber.Text);
+            StorageRegistry.SaveToRegistry(KeyRegister, byteData);
+            AuthorizationData = apiKeySber.Text;
+            Chat = new(AuthorizationData, false, true, false);
         }
 
         private void BtnClickExit(object sender, EventArgs e) => Application.Exit();
