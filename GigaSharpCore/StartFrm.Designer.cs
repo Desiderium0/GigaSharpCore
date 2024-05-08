@@ -23,10 +23,6 @@ namespace GigaSharpForms
 
         #region Код, автоматически созданный конструктором форм Windows
 
-        /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
-        /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
@@ -34,8 +30,10 @@ namespace GigaSharpForms
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.borderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -52,6 +50,8 @@ namespace GigaSharpForms
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panelColor2 = new System.Windows.Forms.Panel();
             this.panelSetting1 = new System.Windows.Forms.Panel();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.apiKeySber = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonTest = new System.Windows.Forms.Button();
             this.panelSetting2 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -334,13 +334,66 @@ namespace GigaSharpForms
             // 
             // panelSetting1
             // 
-            this.panelSetting1.Controls.Add(this.buttonTest);
+            this.panelSetting1.Controls.Add(this.iconButton6);
+            this.panelSetting1.Controls.Add(this.apiKeySber);
             this.panelSetting1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSetting1.Location = new System.Drawing.Point(206, 26);
+            this.panelSetting1.Location = new System.Drawing.Point(0, 0);
             this.panelSetting1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSetting1.Name = "panelSetting1";
-            this.panelSetting1.Size = new System.Drawing.Size(682, 311);
+            this.panelSetting1.Size = new System.Drawing.Size(888, 407);
             this.panelSetting1.TabIndex = 2;
+            // 
+            // iconButton6
+            // 
+            this.iconButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton6.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton6.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Font = new System.Drawing.Font("Segoe UI", 9.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Server;
+            this.iconButton6.IconColor = System.Drawing.Color.DarkGray;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconSize = 35;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.Location = new System.Drawing.Point(720, 330);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(134, 44);
+            this.iconButton6.TabIndex = 9;
+            this.iconButton6.Text = "Сохранить";
+            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
+            // apiKeySber
+            // 
+            this.apiKeySber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.apiKeySber.BackColor = System.Drawing.Color.Transparent;
+            this.apiKeySber.BorderRadius = 5;
+            this.apiKeySber.BorderThickness = 2;
+            this.apiKeySber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.apiKeySber.CustomizableEdges = customizableEdges11;
+            this.apiKeySber.DefaultText = "";
+            this.apiKeySber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.apiKeySber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.apiKeySber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.apiKeySber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.apiKeySber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.apiKeySber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.apiKeySber.ForeColor = System.Drawing.Color.Black;
+            this.apiKeySber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.apiKeySber.Location = new System.Drawing.Point(220, 55);
+            this.apiKeySber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.apiKeySber.Name = "apiKeySber";
+            this.apiKeySber.PasswordChar = '\0';
+            this.apiKeySber.PlaceholderText = "";
+            this.apiKeySber.SelectedText = "";
+            this.apiKeySber.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            this.apiKeySber.Size = new System.Drawing.Size(514, 39);
+            this.apiKeySber.TabIndex = 8;
+            this.apiKeySber.TextOffset = new System.Drawing.Point(0, 4);
             // 
             // buttonTest
             // 
@@ -377,7 +430,7 @@ namespace GigaSharpForms
             this.guna2TextBox2.AutoSize = true;
             this.guna2TextBox2.BackColor = System.Drawing.Color.DimGray;
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2TextBox2.CustomizableEdges = customizableEdges11;
+            this.guna2TextBox2.CustomizableEdges = customizableEdges13;
             this.guna2TextBox2.DefaultText = "";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -399,7 +452,7 @@ namespace GigaSharpForms
             this.guna2TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.ShadowDecoration.BorderRadius = 0;
-            this.guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            this.guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
             this.guna2TextBox2.Size = new System.Drawing.Size(682, 311);
             this.guna2TextBox2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2TextBox2.TabIndex = 0;
@@ -450,7 +503,7 @@ namespace GigaSharpForms
             this.guna2TextBox1.BorderRadius = 5;
             this.guna2TextBox1.BorderThickness = 2;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.CustomizableEdges = customizableEdges7;
+            this.guna2TextBox1.CustomizableEdges = customizableEdges15;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -466,7 +519,7 @@ namespace GigaSharpForms
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            this.guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             this.guna2TextBox1.Size = new System.Drawing.Size(514, 44);
             this.guna2TextBox1.TabIndex = 7;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(0, 4);
@@ -483,6 +536,7 @@ namespace GigaSharpForms
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panelSetting1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -492,10 +546,9 @@ namespace GigaSharpForms
             this.guna2GradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panelSetting1.ResumeLayout(false);
-            this.panelSetting2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panelSetting1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -529,6 +582,8 @@ namespace GigaSharpForms
         private System.Windows.Forms.Panel panelColor1;
         private FontAwesome.Sharp.IconButton aboutButton;
         private FontAwesome.Sharp.IconButton iconButton5;
+        private Guna.UI2.WinForms.Guna2TextBox apiKeySber;
+        private FontAwesome.Sharp.IconButton iconButton6;
     }
 }
 
